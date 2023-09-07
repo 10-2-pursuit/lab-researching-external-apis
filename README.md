@@ -23,48 +23,54 @@ Choose one of the following categories and APIs:
 
 Next, describe your application idea. Your application idea should be simple and make use of the data received by the API. It can make use of other data if necessary.
 
-> Your application idea.
+> Metropolitan Museum of Art API
 
 Write 3 - 5 user stories for your application. Include each below.
 
-> 1. As a user ...
+> 1. As a user, I want to see popular art pieces.
 
-> 1. As a user ...
+> 1. As a user, I want to filter by my favorite artist's name
 
-> 1. As a user ...
+> 1. As a user, I want to see detailed information and the history behind a specific art piece.
 
 What data is needed to complete your application? Describe the data below and provide a link in the documentation showing where to get this data.
 
-> The data I need for my app is ...
+> "isHighlight" to show popular art pieces. "primaryImage" and "additionalImages" to see photos of the art. "culture" to see detailed information about the piece and the history behind it. LINK: https://metmuseum.github.io/
 
 Determine the number of free requests you can make to the API. Include a link in the documentation showing where you found this limit, if possible.
 
-> The number of free requests I can make is...
+> The number of free requests I can make is 80 requests per second. No maximum.
 
 Would the number of free requests you can make to the API be sufficient for you to develop a basic version of the application within a week? Why or why not?
 
-> Your explanation here.
+> Yes, as there is no limit to the amount of free requests one can make. Only the frequency at which the requests are made.
 
 Does working with the API require the use of a credit card? If possible, include a link in the documentation showing where you found this requirement.
 
-> A credit card is...
+> No.
 
 Write one GET request to your chosen API with Postman. This may involve requesting an API key or other steps. If you requested an API Key, **don't include it.** Instead, replace that part of the URL WITH `<MY API KEY>.`
 
-> Requested URL
+> https://collectionapi.metmuseum.org/public/collection/v1/objects/437133
 
 Include a snippet of the data you received from the above request.
 
 ```
-
+{
+    "objectID": 437133,
+    "isHighlight": true,
+    "accessionNumber": "67.241",
+    "accessionYear": "1967",
+    "isPublicDomain": false,
+}
 ```
 
 > **Note**: If you could not get an API key for any reason (like it required a credit card or took too long for an API key to be delivered), just leave a note here and do your best to answer the questions anyway.
 
 What file do you need to store an API key safely?
 
-> The filename is typically ...
+> The filename is typically env.
 
 Why do you want to place that file within the `.gitignore` file?
 
-> Your answer here...
+> So that ones unique API key is not available to the public.
